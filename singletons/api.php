@@ -58,6 +58,9 @@ class JSON_API {
         // Run the method
         $result = $this->controller->$method();
         
+		// Add cool header
+		header("Access-Control-Allow-Origin: *");
+		
         // Handle the result
         $this->response->respond($result);
         
